@@ -16,11 +16,11 @@ npm start <command> <input-file>
 ```
 
 Available commands:
-- `create-test:` Generates a jest describe fixture for the input file. The file will be generated in the same with `input-file.test.js`
+- `generate-unit-tests:` Generates a jest describe fixture for the input file. The file will be generated in the same with `input-file.test.js`
 
 **Example**
 ```bash
-npm start create-test files/sample
+npm start generate-unit-tests files/sample
 ```
 
 It will generate a file called files/sample.test.js
