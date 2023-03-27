@@ -1,5 +1,5 @@
 const client = require('./client');
-const {getInputFile, writeToOutputFile} = require("../fileUtils");
+const { getInputFile, writeToOutputFile } = require("../fileUtils");
 
 async function generateUnitTestsResponse(inputFile) {
   const prompt = `Write jest unit tests for the following javascript function.
