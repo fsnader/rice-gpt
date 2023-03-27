@@ -16,8 +16,7 @@ async function generateUnitTests() {
   const javascriptFilename = process.argv[3];
 
   if (!javascriptFilename) {
-    console.error('Please provide your input javascript input file (without .js extension)');
-    process.exit(1);
+    throw new Error('Please provide your input javascript input file (without .js extension)');
   }
 
   const inputFile = getInputFile(`${javascriptFilename}.js`);

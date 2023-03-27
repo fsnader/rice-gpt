@@ -63,8 +63,7 @@ async function tddHelper() {
   const functionName = process.argv[3];
 
   if (!functionName) {
-    console.error('Please provide your input javascript input file (without .js extension)');
-    process.exit(1);
+    throw new Error('Please provide your input javascript input file (without .js extension)');
   }
 
 

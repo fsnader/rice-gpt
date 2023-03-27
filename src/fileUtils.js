@@ -6,8 +6,7 @@ function getInputFile(inputFilePath) {
   console.log(`Opening file: ${inputFilePath}`);
 
   if (!fs.existsSync(inputFilePath)) {
-    console.error('Input file path is not valid');
-    process.exit(1);
+    throw new Error('Input file path is not valid')
   }
 
   return fs.readFileSync(inputFilePath, 'utf-8');
