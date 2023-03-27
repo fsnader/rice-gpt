@@ -30,6 +30,7 @@ The main goal of this function is: ${mainGoal}`;
 
   prompt += 'The dependencies need to be mocked using jest.mock. Return just the code.';
 
+  console.log('...Generating tests');
   return await generateCompletion(prompt);
 }
 
@@ -51,6 +52,7 @@ async function generateFunctionFromTests({functionName, tests}) {
   const prompt = `Generate the function ${functionName} that passes all the tests provided in the following file:
 ${tests}`;
 
+  console.log('...Generating function');
   const result = await generateCompletion(prompt);
   writeToOutputFile(`${functionName}.js`, result);
 }
