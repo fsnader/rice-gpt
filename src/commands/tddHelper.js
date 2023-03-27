@@ -12,21 +12,21 @@ async function startTddSection({
 }) {
 
   let prompt = `Generate a jest describe block test for a function called ${functionName}.
-The main goal of this function is: ${mainGoal}`;
+The main goal of this function is: ${mainGoal}.`;
 
   if (inputParameters) {
-    prompt += `\nfunction receives the following parameters: ${inputParameters}}`;
+    prompt += `\nThis function receives the following parameters: ${inputParameters}}.`;
   }
 
   if (outputParameters) {
-    prompt += `\nThis function returns the following parameters: ${outputParameters}`;
+    prompt += `\nThis function returns the following parameters: ${outputParameters}.`;
   }
 
   if (dependencies) {
-    prompt += `\nThis function has the following dependencies: ${dependencies}`;
+    prompt += `\nThis function has the following dependencies: ${dependencies}.`;
   }
 
-  prompt+= `Create tests for the following rules:\n ${rules.join('\n')}`;
+  prompt+= `Create tests for the following rules:\n ${rules.join('\n')}.`;
 
   prompt += 'The dependencies need to be mocked using jest.mock. Return just the code.';
 
@@ -87,7 +87,6 @@ async function tddHelper() {
     rules,
   });
 
-  console.log(result);
   writeToOutputFile(`${functionName}.test.js`, result);
 
   const shouldGenerateFunction = prompt('Do you wanna generate the function that passes the unit tests? [y/n] ');

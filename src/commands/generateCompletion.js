@@ -8,7 +8,8 @@ async function generateCompletion(prompt) {
       {role: "user", content: prompt}],
   });
 
-  return completion.data.choices[0].message.content;
+  const rawResult = completion.data.choices[0].message.content;
+  return rawResult.replaceAll('```', '');
 }
 
 module.exports = generateCompletion;
