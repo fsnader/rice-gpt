@@ -1,6 +1,8 @@
 # rice-gpt
 A node.js cli tool that uses GPT to automate a lot of different javascript programming tasks, like unit testing, repositories generation, etc
 
+*BTW*, all tests in this project had been created using the tool
+
 How to run this project:
 
 1. Create an .env file with your openai API KEY
