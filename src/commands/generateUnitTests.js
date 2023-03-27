@@ -1,4 +1,4 @@
-const client = require('./client');
+const generateCompletion = require("./generateCompletion");
 const { getInputFile, writeToOutputFile } = require("../fileUtils");
 
 async function generateUnitTestsResponse(inputFile) {
@@ -8,12 +8,7 @@ Use Arrange / Act / Assert
 Mock all dependencies: \n${inputFile}`;
 
   console.log('...Generating unit tests')
-  const completion = await client.createChatCompletion({
-    model: "gpt-3.5-turbo",
-    messages: [{role: "user", content: prompt}],
-  });
-
-  return completion.data.choices[0].message.content;
+  return await generateCompletion(prompt);
 }
 
 async function generateUnitTests() {
