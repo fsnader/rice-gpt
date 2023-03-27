@@ -45,7 +45,7 @@ What are the output parameters of this function?
 A string with 'Fizz', 'Buzz', 'FizzBuzz', or the number itself in a string format
 
 What dependencies does it have? (any imported function that you will want to mock.
-isDivisibleFor(number), that returns true or false
+isDivisibleFor(number, number)
 
 Include the next rule. (Type enter to finish)
 
