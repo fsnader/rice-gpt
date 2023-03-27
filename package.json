@@ -4,7 +4,8 @@
   "description": "A Node.js CLI tool to send files to the OpenAI Completion API and save the response in an output file",
   "main": "src/index.js",
   "scripts": {
-    "start": "node src/index.js"
+    "start": "node src/index.js",
+    "test": "jest"
   },
   "author": "Your Name",
   "license": "MIT",
@@ -12,5 +13,8 @@
     "dotenv": "^16.0.3",
     "openai": "^3.2.1",
     "prompt-sync": "^4.2.0"
+  },
+  "devDependencies": {
+    "jest": "^29.5.0"
   }
 }
