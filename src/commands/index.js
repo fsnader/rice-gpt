@@ -1,7 +1,7 @@
 const generateUnitTests = require("./generateUnitTests");
 
 const commands = {
-  'create-test': generateUnitTests,
+  'generate-unit-tests': generateUnitTests,
 }
 
 module.exports = {
