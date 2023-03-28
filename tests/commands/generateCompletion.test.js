@@ -45,7 +45,7 @@ describe("generateCompletion", () => {
         choices: [
           {
             message: {
-              content: "javascript```\nconsole.log('Hello, World!')```\n"
+              content: "```javascript\nconsole.log('Hello, World!')```\n"
             }
           }
         ]

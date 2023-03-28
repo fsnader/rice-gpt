@@ -1,4 +1,4 @@
-function AddTwoNumbers(a, b) {
+function addTwoNumbers(a, b) {
   if (!a) {
     throw new Error("Provide a");
   }
@@ -9,3 +9,5 @@ function AddTwoNumbers(a, b) {
 
   return a + b;
 }
+
+module.exports = addTwoNumbers;
