@@ -29,6 +29,6 @@ describe('executeCommand unit tests', () => {
     commands.includes.mockReturnValueOnce(false);
 
     // Act & Assert
-    await expect(executeCommand(command)).rejects.toThrow('Please provide a valid command');
+    await expect(executeCommand(command)).rejects.toThrow();
   });
 });

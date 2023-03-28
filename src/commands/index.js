@@ -6,7 +6,10 @@ const commands = {
   'tdd-helper': tddHelper,
 }
 
+
+
 module.exports = {
+  list: Object.keys(commands),
   includes: (command) => Object.keys(commands).includes(command),
   ...commands,
 }
