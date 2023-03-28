@@ -1,4 +1,4 @@
-const generateCompletion = require("./generateCompletion");
+const generateCompletion = require("../openai/generateCompletion");
 const { getInputFile, writeToOutputFile } = require("../utils/fileUtils");
 const getCommandArguments = require("../utils/getCommandArgument");
 

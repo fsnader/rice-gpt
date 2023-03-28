@@ -1,5 +1,5 @@
 const { writeToOutputFile } = require("../utils/fileUtils");
-const generateCompletion = require("./generateCompletion");
+const generateCompletion = require("../openai/generateCompletion");
 const getCommandArguments = require("../utils/getCommandArgument");
 const prompt = require("prompt-sync")();
 

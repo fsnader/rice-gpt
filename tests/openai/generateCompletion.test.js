@@ -1,6 +1,6 @@
-jest.mock('../../src/commands/client');
-const client = require('../../src/commands/client');
-const generateCompletion = require('../../src/commands/generateCompletion');
+jest.mock('../../src/openai/client');
+const client = require('../../src/openai/client');
+const generateCompletion = require('../../src/openai/generateCompletion');
 
 describe("generateCompletion", () => {
 

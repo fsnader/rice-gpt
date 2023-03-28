@@ -1,9 +1,9 @@
 const generateUnitTests = require('../../src/commands/generateUnitTests');
-const generateCompletion = require("../../src/commands/generateCompletion");
+const generateCompletion = require("../../src/openai/generateCompletion");
 const { getInputFile, writeToOutputFile } = require("../../src/utils/fileUtils");
 const getCommandArguments = require("../../src/utils/getCommandArgument");
 
-jest.mock("../../src/commands/generateCompletion");
+jest.mock("../../src/openai/generateCompletion");
 jest.mock("../../src/utils/fileUtils");
 jest.mock("../../src/utils/getCommandArgument");
 
