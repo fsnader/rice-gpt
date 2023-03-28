@@ -1,7 +1,7 @@
 # rice-gpt
 A node.js cli tool that uses GPT to automate a lot of different javascript programming tasks, like unit testing, repositories generation, etc
 
-*BTW*, all tests in this project had been created using the tool
+`All tests in this project had been created using the tool`
 
 How to run this project:
 
@@ -27,6 +27,8 @@ npm start generate-unit-tests files/sample
 ```
 
 It will generate a file called `files/sample.test.js`
+
+![generate-unit-tests](/images/generate-unit-tests.gif?raw=true)
 
 ## TDD Wizard ##
 
