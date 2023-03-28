@@ -9,7 +9,7 @@ async function generateCompletion(prompt) {
   });
 
   const rawResult = completion.data.choices[0].message.content;
-  return rawResult.replaceAll('```', '');
+  return rawResult.replaceAll(/```|javascript```/g, '');
 }
 
 module.exports = generateCompletion;

@@ -1,5 +1,5 @@
 const fs = require('fs');
-const { getInputFile, writeToOutputFile } = require('../src/fileUtils');
+const { getInputFile, writeToOutputFile } = require('../src/utils/fileUtils');
 
 jest.mock('fs');
 

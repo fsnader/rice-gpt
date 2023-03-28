@@ -1,6 +1,7 @@
 const executeCommand = require("./executeCommand");
+const getCommandArguments = require("./utils/getCommandArgument");
 
-const command = process.argv[2];
+const command = getCommandArguments(2);
 
 executeCommand(command)
   .then(() => console.log('.'))

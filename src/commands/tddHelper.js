@@ -1,5 +1,6 @@
-const { writeToOutputFile } = require("../fileUtils");
+const { writeToOutputFile } = require("../utils/fileUtils");
 const generateCompletion = require("./generateCompletion");
+const getCommandArguments = require("../utils/getCommandArgument");
 const prompt = require("prompt-sync")();
 
 async function startTddSection({
@@ -60,7 +61,7 @@ ${tests}`;
 async function tddHelper() {
   console.clear();
 
-  const functionName = process.argv[3];
+  const functionName = getCommandArguments(3);
 
   if (!functionName) {
     throw new Error('Please provide your input javascript input file (without .js extension)');

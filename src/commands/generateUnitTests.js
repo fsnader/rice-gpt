@@ -1,5 +1,6 @@
 const generateCompletion = require("./generateCompletion");
-const { getInputFile, writeToOutputFile } = require("../fileUtils");
+const { getInputFile, writeToOutputFile } = require("../utils/fileUtils");
+const getCommandArguments = require("../utils/getCommandArgument");
 
 async function generateUnitTestsResponse(inputFile) {
   const prompt = `Write jest unit tests for the following javascript function.
@@ -13,7 +14,7 @@ Mock all dependencies: \n${inputFile}`;
 
 async function generateUnitTests() {
 
-  const javascriptFilename = process.argv[3];
+  const javascriptFilename = getCommandArguments(3);
 
   if (!javascriptFilename) {
     throw new Error('Please provide your input javascript input file (without .js extension)');
