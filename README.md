@@ -20,6 +20,7 @@ npm start <command> <input-file>
 Available commands:
 - `generate-unit-tests:` Generates a jest describe fixture for the input file. The file will be generated in the same with `input-file.test.js`
 - `tdd-helper`: A wizard that will generate a jest unit test suite for the provided rules, and optionally generate the function that is being tested
+- `freestyle`: Receives any command you provide and executes the prompt. The output will be saved on the provided input-file. Use your imagination 💭
 
 ## Generate unit tests ##
 ```bash
@@ -75,3 +76,18 @@ y
 ```
 
 It will generate a file called `files/fizzBuzz.js` with the actual function
+
+## TDD Wizard ##
+
+```bash
+npm start freestyle extractHtmlHeaders
+```
+
+The wizard will ask for your prompt and will generate the output on `extractHtmlHeaders.js`
+
+```bash
+Insert your prompt:
+
+Generate a function that receives a string in the html format and extracts all header tags to an array
+```
+

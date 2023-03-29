@@ -1,9 +1,11 @@
 const generateUnitTests = require("./generateUnitTests");
 const tddHelper = require("./tddHelper");
+const freestyle = require("./freestyle");
 
 const commands = {
   'generate-unit-tests': generateUnitTests,
   'tdd-helper': tddHelper,
+  'freestyle': freestyle,
 }
 
 
