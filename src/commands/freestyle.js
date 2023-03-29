@@ -10,8 +10,6 @@ async function freestyle() {
     throw new Error('Please provide your input javascript input file (without .js extension)');
   }
 
-  console.clear();
-
   const command = prompt("Insert your prompt: ");
 
   console.log("...Generating output");

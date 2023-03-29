@@ -59,7 +59,6 @@ ${tests}`;
 }
 
 async function tddHelper() {
-  console.clear();
 
   const functionName = getCommandArguments(3);
 
