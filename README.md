@@ -3,18 +3,25 @@ A node.js cli tool that uses GPT to automate a lot of different javascript progr
 
 `All tests in this project had been created using the tool`
 
-How to run this project:
+## How to run locally ##
 
-1. Create an .env file with your openai API KEY
+1. Set your OpenAI API key to the env
 
-```env
-OPENAI_API_KEY=<YOUR_API_KEY>
+```batch
+// This adds the OPENAI_API_KEY env variable to the current terminal session temporarily (until it closes)
+export OPENAI_API_KEY=<YOUR_API_KEY>
 ```
 
-2. Run the project using the following command. The input file should be provided *without* the .js extension
+2. Install rice-gpt globally
 
 ```bash
-npm start <command> <input-file>
+npm install -g
+```
+
+3. Run the project using the following command. The input file should be provided *without* the .js extension
+
+```bash
+rice-gpt <command> <input-file>
 ```
 
 Available commands:
@@ -24,7 +31,7 @@ Available commands:
 
 ## Generate unit tests ##
 ```bash
-npm start generate-unit-tests files/sample
+rice-gpt generate-unit-tests files/sample
 ```
 
 It will generate a file called `files/sample.test.js`
@@ -34,7 +41,7 @@ It will generate a file called `files/sample.test.js`
 ## TDD Wizard ##
 
 ```bash
-npm start tdd-helper files/fizzBuzz
+rice-gpt tdd-helper files/fizzBuzz
 ```
 The wizard will use fizzBuzz as the name of the function you want to create.
 After that, it will ask you for more information before generating the tests
@@ -80,7 +87,7 @@ It will generate a file called `files/fizzBuzz.js` with the actual function
 ## TDD Wizard ##
 
 ```bash
-npm start freestyle extractHtmlHeaders
+rice-gpt freestyle extractHtmlHeaders
 ```
 
 The wizard will ask for your prompt and will generate the output on `extractHtmlHeaders.js`

@@ -1,5 +1,5 @@
 {
-  "name": "openai-cli-tool",
+  "name": "rice-gpt",
   "version": "1.0.0",
   "description": "A Node.js CLI tool to send files to the OpenAI Completion API and save the response in an output file",
   "main": "src/index.js",
@@ -8,7 +8,13 @@
     "test": "jest",
     "lint-fix": "eslint --fix ./*.js"
   },
-  "author": "Your Name",
+  "bin": {
+    "rice-gpt": "src/index.js"
+  },
+  "author": {
+    "name": "Felipe Nader",
+    "url": "https://github.com/fsnader/"
+  },
   "license": "MIT",
   "dependencies": {
     "dotenv": "^16.0.3",
