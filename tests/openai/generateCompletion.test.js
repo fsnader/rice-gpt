@@ -29,7 +29,7 @@ describe("generateCompletion", () => {
     const result = await generateCompletion(prompt);
 
     expect(createChatCompletionMock).toHaveBeenCalledWith({
-      model: "gpt-3.5-turbo",
+      model: "gpt-4",
       messages: [
         {role: "system", content: "You are a javascript coding assistant. You will always return just code, without any comment or explanation"},
         {role: "user", content: prompt}],

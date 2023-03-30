@@ -1,7 +1,7 @@
 const { writeToOutputFile } = require("../utils/fileUtils");
 const generateCompletion = require("../openai/generateCompletion");
 const getCommandArguments = require("../utils/getCommandArgument");
-const prompt = require("prompt-sync")();
+const getPrompt = require("../utils/getPrompt");
 
 async function startTddSection({
   functionName,
@@ -39,7 +39,7 @@ function getRules() {
   const rules = [];
 
   while(true) {
-    const rule = prompt('Include the next rule. (Type enter to finish)  ');
+    const rule = getPrompt('Include the next rule. (Type enter to finish)  ');
 
     if (!rule) {
       return rules;
@@ -67,13 +67,13 @@ async function tddHelper() {
   }
 
 
-  const mainGoal = prompt('What is the function main goal? ')
+  const mainGoal = getPrompt('What is the function main goal? ')
 
-  const inputParameters = prompt('What are the input parameters of this function? ');
+  const inputParameters = getPrompt('What are the input parameters of this function? ');
 
-  const outputParameters = prompt('What are the output parameters of this function? ')
+  const outputParameters = getPrompt('What are the output parameters of this function? ')
 
-  const dependencies = prompt('What dependencies does it have? (any imported function that you will want to mock. ');
+  const dependencies = getPrompt('What dependencies does it have? (any imported function that you will want to mock. ');
 
   const rules = getRules();
 
@@ -88,7 +88,7 @@ async function tddHelper() {
 
   writeToOutputFile(`${functionName}.test.js`, result);
 
-  const shouldGenerateFunction = prompt('Do you wanna generate the function that passes the unit tests? [y/n] ');
+  const shouldGenerateFunction = getPrompt('Do you wanna generate the function that passes the unit tests? [y/n] ');
 
   if (shouldGenerateFunction !== 'y') {
     return;
