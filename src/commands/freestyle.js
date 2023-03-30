@@ -7,7 +7,7 @@ async function freestyle() {
   const functionName = getCommandArguments(3);
 
   if (!functionName) {
-    throw new Error('Please provide your input javascript input file (without .js extension)');
+    throw new Error('Please provide your input javascript input file (with the extension)');
   }
 
   const command = prompt("Insert your prompt: ");
@@ -15,7 +15,7 @@ async function freestyle() {
   console.log("...Generating output");
   const result = await generateCompletion(command);
 
-  writeToOutputFile(`${functionName}.js`, result);
+  writeToOutputFile(`${functionName}`, result);
 }
 
 module.exports = freestyle;

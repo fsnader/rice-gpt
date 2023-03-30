@@ -87,7 +87,7 @@ It will generate a file called `files/fizzBuzz.js` with the actual function
 ## TDD Wizard ##
 
 ```bash
-rice-gpt freestyle extractHtmlHeaders
+rice-gpt freestyle extractHtmlHeaders.js
 ```
 
 The wizard will ask for your prompt and will generate the output on `extractHtmlHeaders.js`
