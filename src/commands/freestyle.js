@@ -10,7 +10,7 @@ async function freestyle() {
     throw new Error('Please provide your input javascript input file (with the extension)');
   }
 
-  const command = getPrompt("Insert your prompt: ");
+  const command = await getPrompt("Insert your prompt: ");
 
   console.log("...Generating output");
   const result = await generateCompletion(command);

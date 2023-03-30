@@ -20,7 +20,7 @@
     "dotenv": "^16.0.3",
     "figlet": "^1.5.2",
     "openai": "^3.2.1",
-    "prompt-sync": "^4.2.0"
+    "prompt-sync-plus": "^1.0.2"
   },
   "devDependencies": {
     "eslint": "^8.37.0",

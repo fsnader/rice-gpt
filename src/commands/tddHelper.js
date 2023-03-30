@@ -35,11 +35,11 @@ The main goal of this function is: ${mainGoal}.`;
   return await generateCompletion(prompt);
 }
 
-function getRules() {
+async function getRules() {
   const rules = [];
 
   while(true) {
-    const rule = getPrompt('Include the next rule. (Type enter to finish)  ');
+    const rule = await getPrompt('Include the next rule. (Type enter to finish)  ');
 
     if (!rule) {
       return rules;
@@ -67,15 +67,15 @@ async function tddHelper() {
   }
 
 
-  const mainGoal = getPrompt('What is the function main goal? ')
+  const mainGoal = await getPrompt('What is the function main goal? ')
 
-  const inputParameters = getPrompt('What are the input parameters of this function? ');
+  const inputParameters = await getPrompt('What are the input parameters of this function? ');
 
-  const outputParameters = getPrompt('What are the output parameters of this function? ')
+  const outputParameters = await getPrompt('What are the output parameters of this function? ')
 
-  const dependencies = getPrompt('What dependencies does it have? (any imported function that you will want to mock. ');
+  const dependencies = await getPrompt('What dependencies does it have? (any imported function that you will want to mock. ');
 
-  const rules = getRules();
+  const rules = await getRules();
 
   const result = await startTddSection({
     functionName,
@@ -88,7 +88,7 @@ async function tddHelper() {
 
   writeToOutputFile(`${functionName}.test.js`, result);
 
-  const shouldGenerateFunction = getPrompt('Do you wanna generate the function that passes the unit tests? [y/n] ');
+  const shouldGenerateFunction = await getPrompt('Do you wanna generate the function that passes the unit tests? [y/n] ');
 
   if (shouldGenerateFunction !== 'y') {
     return;
