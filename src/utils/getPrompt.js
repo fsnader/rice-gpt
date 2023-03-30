@@ -4,7 +4,7 @@ async function getPrompt(text) {
   const prompt = psp.default();
 
   console.log(text);
-  return prompt("");
+  return prompt("> ");
 }
 
 module.exports = getPrompt;
