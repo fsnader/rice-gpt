@@ -1,14 +1,9 @@
-const generateUnitTests = require("./generateUnitTests");
-const tddHelper = require("./tddHelper");
-const freestyle = require("./freestyle");
-
 const commands = {
-  'generate-unit-tests': generateUnitTests,
-  'tdd-helper': tddHelper,
-  'freestyle': freestyle,
+  'generate-unit-tests': require("./generateUnitTests"),
+  'tdd-helper': require("./tddHelper"),
+  'freestyle': require("./freestyle"),
+  'refactor': require("./refactor"),
 }
-
-
 
 module.exports = {
   list: Object.keys(commands),

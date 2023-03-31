@@ -27,7 +27,8 @@ rice-gpt <command> <input-file>
 Available commands:
 - `generate-unit-tests:` Generates a jest describe fixture for the input file. The file will be generated in the same with `input-file.test.js`
 - `tdd-helper`: A wizard that will generate a jest unit test suite for the provided rules, and optionally generate the function that is being tested
-- `freestyle`: Receives any command you provide and executes the prompt. The output will be saved on the provided input-file. Use your imagination 💭
+- `freestyle`: Receives any command you provide and executes the prompt. The output will be saved on the provided input-file.
+- `refactor`: Receives a command and refactor the provided file accordingly
 
 ## Generate unit tests ##
 ```bash
@@ -84,13 +85,13 @@ y
 
 It will generate a file called `files/fizzBuzz.js` with the actual function
 
-## TDD Wizard ##
+## Free style ##
 
 ```bash
 rice-gpt freestyle extractHtmlHeaders.js
 ```
 
-The wizard will ask for your prompt and will generate the output on `extractHtmlHeaders.js`
+The cli will ask for your prompt and will generate the output on `extractHtmlHeaders.js`
 
 ```bash
 Insert your prompt:
@@ -98,3 +99,13 @@ Insert your prompt:
 Generate a function that receives a string in the html format and extracts all header tags to an array
 ```
 
+## Refactor ##
+```bash
+rice-gpt refactor sample.js
+```
+The cli will ask for your prompt and will refactor `sample.js` accordingly
+
+```bash
+Insert your prompt
+Refactor the function to receive 3 numbers instead of two
+```
