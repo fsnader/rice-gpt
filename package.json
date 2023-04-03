@@ -2,6 +2,9 @@
   "name": "rice-gpt",
   "version": "1.0.0",
   "description": "A Node.js CLI tool to send files to the OpenAI Completion API and save the response in an output file",
+  "homepage": "https://github.com/fsnader/rice-gpt",
+  "repository": "https://github.com/fsnader/rice-gpt",
+  "keywords": ["openai", "chatgpt", "gpt", "code generation", "copilot"],
   "main": "src/index.js",
   "scripts": {
     "start": "node src/index.js",
@@ -13,6 +16,7 @@
   },
   "author": {
     "name": "Felipe Nader",
+    "email": "fsnader@gmail.com",
     "url": "https://github.com/fsnader/"
   },
   "license": "MIT",
