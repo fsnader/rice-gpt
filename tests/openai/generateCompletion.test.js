@@ -62,5 +62,29 @@ describe("generateCompletion", () => {
 
   });
 
+  test("should replace triple backticks and json block types with empty string", async () => {
+
+    const createChatCompletionMock = jest.fn(() => ({
+      data: {
+        choices: [
+          {
+            message: {
+              content: "```json\nconsole.log('Hello, World!')```\n"
+            }
+          }
+        ]
+      }
+    }));
+
+    client.createChatCompletion.mockImplementationOnce(createChatCompletionMock);
+
+    const prompt = "console.log('Hello, World!')";
+
+    const result = await generateCompletion(prompt);
+
+    expect(result).toEqual("\nconsole.log('Hello, World!')\n");
+
+  });
+
 });
 
