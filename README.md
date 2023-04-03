@@ -17,6 +17,9 @@ export OPENAI_API_KEY=<YOUR_API_KEY>
 2. Install rice-gpt globally
 
 ```bash
+// From npm
+npm install rice-gpt -g
+// From local code
 npm install -g
 ```
 
