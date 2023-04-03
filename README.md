@@ -4,6 +4,7 @@ A node.js cli tool that uses GPT to automate a lot of different javascript progr
 `All tests in this project have been created using the tool`
 
 [DEMO VIDEO](https://loom.com/share/7a29f683901846bf87c7dedeb2a03c17)
+[NPM](https://www.npmjs.com/package/rice-gpt)
 
 ## How to run locally ##
 
